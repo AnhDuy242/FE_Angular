@@ -1,0 +1,41 @@
+
+
+<!-- <h1> hello {{name}}</h1> -->
+
+<!-- <input value="{{name}}">  ==  <input [value] = "name">-->
+<!-- <br/> -->
+
+
+<!-- <h2 *ngIf="age > 18">mày già rồi</h2>
+<h2 *ngIf="age <= 18">mày trẻ qá</h2> -->
+
+<!-- <div>
+  <input type="text" [(ngModel)]="name">
+<h2> Hello chào bạn {{name}}</h2>
+<button (click)="resetName()"> Reset ten</button>
+</div> -->
+
+<!-- <div *ngFor="let trai of traiCay; let i = index ">
+  <li>{{i + 1}} . {{trai}}</li>
+</div> -->
+<br/>
+<table class="table">
+  <tr>
+    <th>STT</th>
+    <th>ten</th>
+    <th>gia</th>
+    <th>Trang Thai</th>
+
+  </tr>
+  <tr *ngFor="let trai of traiCay2; let i = index ">
+    <td class="right">{{i + 1}}</td>
+    <td class="right">{{trai.ten}}</td>
+    <td class="right">
+      <span [ngClass]="{ 'soam': trai.gia < 0}">{{trai.gia}}</span>
+    </td>
+    <td class="right">
+      <span *ngIf="trai.hagia"> Dang Ha gia</span>
+    </td>
+  </tr>
+
+</table>
